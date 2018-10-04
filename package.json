@@ -1,0 +1,29 @@
+{
+  "name": "review-app",
+  "version": "1.0.0",
+  "description": "Review App With node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechOUs/node-review-app.git"
+  },
+  "keywords": [
+    "Node",
+    "App"
+  ],
+  "author": "Aniket Batabyal (anarchymonkey)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TechOUs/node-review-app/issues"
+  },
+  "homepage": "https://github.com/TechOUs/node-review-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.3.1"
+  }
+}
