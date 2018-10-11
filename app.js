@@ -11,6 +11,8 @@ let databaseSchema = mongoose.Schema({
   review : String
 });
 
+let databaseModel = mongoose.model("databaseModel");
+
 app.get("/",function(req,res)
 {
   console.log("Accessed the home page");
