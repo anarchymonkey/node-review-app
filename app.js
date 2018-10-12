@@ -11,7 +11,7 @@ let databaseSchema = mongoose.Schema({
   review : String
 });
 
-let databaseModel = mongoose.model("databaseModel");
+let databaseModel = mongoose.model("databaseModel",databaseSchema);
 
 app.get("/",function(req,res)
 {
@@ -22,6 +22,22 @@ app.get("/reviews",function(req,res)
 {
   console.log("Accessed the reviews page");
   res.render("reviews");
+});
+
+app.get("/reviews/add",function(req,res){
+  res.render("addReview");
+  let name = name;
+  let review = review;
+  let dbEntry = {name:name,review:review};
+  databaseModel.create(dbEntry,function(err,res){
+    if(err)
+    {
+      console.log("Data Not Entered");
+    }
+    else {
+      res.redirect("/reviews");
+    }
+  });
 });
 app.listen(process.env.PORT || 3000 , function(){
   console.log("Server Started on port 3000");
